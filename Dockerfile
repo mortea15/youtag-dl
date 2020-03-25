@@ -1,6 +1,6 @@
 FROM python:alpine
 
-LABEL maintainer="mortea15@github"
+LABEL maintainer="Morten Amundsen <me@mortenamundsen.me>"
 
 ENV USER=abc
 ENV PUID=1000
@@ -33,8 +33,6 @@ COPY . /usr/src/app
 
 EXPOSE 8080
 
-VOLUME ["/youtube-dl"]
-
 USER $USER
 
-CMD [ "python", "-u", "./youtube-dl-server.py" ]
+CMD [ "python", "-u", "./youtag-dl.py" ]
